@@ -1,1 +1,1 @@
-sudo docker build -t bot-example .
+docker build -t davideceretti/strategypy-bot-example .

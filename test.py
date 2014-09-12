@@ -64,10 +64,10 @@ def send_msg(ws):
 
 @timeit
 def send_msgs(number):
-    ws = create_connection("ws://localhost:8000")
+    ws = create_connection("ws://localhost:8001")
     for _ in xrange(number):
         send_msg(ws)
     ws.close()
 
 
-send_msgs(150)
+send_msgs(2)

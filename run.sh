@@ -1,1 +1,1 @@
-sudo docker run -t -i --rm -p 8000:8000 -v `pwd`:/code/work bot-example
+docker run -t -i --rm -p 8001:8001 -v `pwd`:/code/work davideceretti/strategypy-bot-example
