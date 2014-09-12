@@ -1,19 +1,30 @@
 strategypy-bot-example
 ======================
 
-An example bot for the strategypy game.
+An example bot for the strategypy game, running on a flask web service docker container.
+The web service listen to strategypy json contexts and send back the action to execute.
 
-Install
--------
+System dependencies
+-------------------
+
+Docker
+
+
+Quickstart
+----------
 
 ```
-sudo docker build -t bot-example .
-```
-
-Run
----
+./install.sh
+./run.sh
 
 ```
-sudo docker run -t -i --rm -p 8000:8000 -v `pwd`:/code/work bot-example
-curl localhost:8000
+
+Test
+----
+
+```
+# (in your virtualenv)
+# (with your application running)
+pip install -r test-requirements.txt
+python test.py
 ```

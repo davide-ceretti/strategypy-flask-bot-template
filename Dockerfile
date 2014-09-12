@@ -3,6 +3,7 @@ RUN apt-get update
 RUN apt-get install -y python-setuptools libevent-dev gcc python-dev
 RUN easy_install pip
 RUN pip install flask-sockets
+RUN pip install gunicorn
 
 ADD bot.py /code/work/bot.py
 
@@ -12,4 +13,4 @@ WORKDIR /code/work
 
 EXPOSE 8000
 
-CMD python bot.py
+CMD gunicorn -k flask_sockets.worker -b 0.0.0.0:8000 api:app
